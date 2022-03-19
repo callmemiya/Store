@@ -46,13 +46,10 @@ public class Application {
                 Customer customer;
                 if (custNum == 0) {
                     customer = new Child();
-                    System.out.println(customer.getName() + "     " +customer.getRemains());
                 } else if (custNum == 1) {
                     customer = new Women();
-                    System.out.println(customer.getName() + "     " +customer.getRemains());
                 } else {
                     customer = new Man();
-                    System.out.println(customer.getName() + "     " +customer.getRemains());
                 }
                 Cash chosenCash = customer.choosingCash(cashes);
                 chosenCash.addCustomer(customer);
