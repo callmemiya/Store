@@ -1,13 +1,12 @@
-import java.util.Random;
-
 public class Women extends Customer {
-//    private int purchaseCount;
-//    private boolean isJustCome;
-//    private int remainsOfPurchases;
 
-//    public Women(){
-//        super();
-//    }
+    public Women(){
+        super();
+    }
+
+    public Women(int purchaseCount){
+        super(purchaseCount);
+    }
 
     public String getName(){
         return "Woman";
@@ -24,12 +23,4 @@ public class Women extends Customer {
         }
         return chosenCash;
     }
-
-//    public int getRemains(){
-//        return this.remainsOfPurchases;
-//    }
-//
-//    public void changeRemains(int rest){
-//        this.remainsOfPurchases = rest;
-//    }
 }

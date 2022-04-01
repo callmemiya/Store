@@ -1,14 +1,16 @@
-import java.util.Random;
-
 public abstract class Customer {
-    private int purchaseCount;
+    private final int purchaseCount;
     private boolean isJustCome;
     private int remainsOfPurchases;
 
     public Customer(){
-        Random random = new Random();
-        this.purchaseCount = random.nextInt(5) + 1;
-        this.remainsOfPurchases = this.purchaseCount;
+        this.purchaseCount = 0;
+        this.remainsOfPurchases = 0;
+    }
+
+    public Customer(int purchaseCount){
+        this.purchaseCount = purchaseCount;
+        this.remainsOfPurchases = purchaseCount;
     }
 
     abstract String getName();
@@ -17,9 +19,9 @@ public abstract class Customer {
 
     public int getRemains(){
         return this.remainsOfPurchases;
-    };
+    }
 
     public void changeRemains(int rest){
         this.remainsOfPurchases = rest;
-    };
+    }
 }

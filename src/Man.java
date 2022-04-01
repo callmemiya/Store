@@ -1,11 +1,12 @@
 public class Man extends Customer {
-//    private int purchaseCount;
-//    private boolean isJustCome;
-//    private int remainsOfPurchases;
 
-//    public Men(){
-//        super();
-//    }
+    public Man(){
+        super();
+    }
+
+    public Man(int purchaseCount){
+        super(purchaseCount);
+    }
 
     public String getName(){
         return "Man";
@@ -31,12 +32,4 @@ public class Man extends Customer {
         }
         return chosenCash;
     }
-
-//    public int getRemains(){
-//        return this.remainsOfPurchases;
-//    }
-//
-//    public void changeRemains(int rest){
-//        this.remainsOfPurchases = rest;
-//    }
 }

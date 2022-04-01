@@ -1,5 +1,4 @@
 import java.util.LinkedList;
-import java.util.Queue;
 
 public class Cash {
     private final int speed;
@@ -27,19 +26,22 @@ public class Cash {
     }
 
     public void service(){
-        int remains = this.speed;
-        for (Customer customer : queue){
-            int rest = customer.getRemains() - remains;
-            if (rest > 0){
-                customer.changeRemains(rest);
+        int rest = this.speed;
+        int countOfServiced = 0;
+        for (Customer customer : this.queue){
+            rest -= customer.getRemains();
+            if (rest < 0){
+                customer.changeRemains(-rest);
                 break;
-            } else if (rest < 0){
-                queue.remove(customer);
-                remains = -rest;
+            } else if (rest > 0){
+                countOfServiced += 1;
             } else {
-                queue.remove(customer);
+                countOfServiced += 1;
                 break;
             }
+        }
+        for (int i = 0; i < countOfServiced; i++){
+            this.queue.remove();
         }
     }
 }

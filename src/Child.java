@@ -1,13 +1,14 @@
 import java.util.Random;
 
 public class Child extends Customer{
-//    private int purchaseCount;
-//    private boolean isJustCome;
-//    private int remainsOfPurchases;
 
-//    public Child(){
-//        super();
-//    }
+    public Child(){
+        super();
+    }
+
+    public Child(int purchaseCount){
+        super(purchaseCount);
+    }
 
     public String getName(){
         return "Child";
@@ -17,12 +18,4 @@ public class Child extends Customer{
         Random rnd = new Random();
         return cash[rnd.nextInt(cash.length)];
     }
-
-//    public int getRemains(){
-//        return this.remainsOfPurchases;
-//    }
-
-//    public void changeRemains(int rest){
-//        this.remainsOfPurchases = rest;
-//    }
 }
